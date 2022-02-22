@@ -1,11 +1,11 @@
 package readers;
 
 public class Reader {
-    public String FIO;
-    public int student_number;
-    public String faculty;
-    public String date_of_birth;
-    public int phone_number;
+    String FIO;
+    int student_number;
+    String faculty;
+    String date_of_birth;
+    int phone_number;
 
     public Reader() {
 
@@ -61,60 +61,42 @@ public class Reader {
 
     public void takeBook(int number_of_books) {
         System.out.println(this.FIO + " взял " + number_of_books + " книги");
+        System.out.println();
     }
 
     public void takeBook(String... books) {
-        System.out.print(this.FIO + " взял книги:");
-        for (int i = 0; i < books.length; i++) {
-            System.out.print(" " + books[i]);
-            if (i != books.length - 1) {
-                System.out.print(",");
-            } else {
-                System.out.print(".");
-            }
+        System.out.println(this.FIO + " взял книги:");
+        for (String book:books) {
+            System.out.println(book);
         }
         System.out.println();
     }
 
     public void takeBook(Book... books) {
-        System.out.print(this.FIO + " взял книги:");
-        for (int i = 0; i < books.length; i++) {
-            System.out.print(" " + books[i].name_of_book);
-            if (i != books.length - 1) {
-                System.out.print(",");
-            } else {
-                System.out.print(".");
-            }
+        System.out.println(this.FIO + " взял книги:");
+        for (Book book:books) {
+            System.out.println(book.name_of_book);
         }
         System.out.println();
     }
 
     public void returnBook(int number_of_books) {
         System.out.println(this.FIO + " вернул " + number_of_books + " книги");
+        System.out.println();
     }
 
     public void returnBook(String... books) {
-        System.out.print(this.FIO + " вернул книги:");
-        for (int i = 0; i < books.length; i++) {
-            System.out.print(" " + books[i]);
-            if (i != books.length - 1) {
-                System.out.print(",");
-            } else {
-                System.out.print(".");
-            }
+        System.out.println(this.FIO + " вернул книги:");
+        for (String book:books) {
+            System.out.println(book);
         }
         System.out.println();
     }
 
     public void returnBook(Book... books) {
-        System.out.print(this.FIO + " вернул книги:");
-        for (int i = 0; i < books.length; i++) {
-            System.out.print(" " + books[i].name_of_book);
-            if (i != books.length - 1) {
-                System.out.print(",");
-            } else {
-                System.out.print(".");
-            }
+        System.out.println(this.FIO + " вернул книги:");
+        for (Book book:books) {
+            System.out.println(book.name_of_book);
         }
         System.out.println();
     }

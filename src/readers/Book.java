@@ -1,8 +1,8 @@
 package readers;
 
 public class Book {
-    public String name_of_book;
-    public String author_of_book;
+    String name_of_book;
+    String author_of_book;
 
     public Book() {
 
